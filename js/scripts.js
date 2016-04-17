@@ -64,21 +64,39 @@ $(document).ready(function () {
 
     /*--- change img banner ---*/
 
-
+    var isItStay = true;
     $('.img-switch span').click(function () {
+
         var time = 500;
-        var indexClicked = $(this).index();
 
-        $('.img-switch span.active-img-switch').removeClass('active-img-switch');
-        $(this).addClass('active-img-switch');
+        if (isItStay) {
 
-        $('.change-img div.visible').fadeOut(time, function () {
-            $(this).removeClass('visible');
+            var indexCurrent = $('.img-switch span.active-img-switch').index();
+            var indexClicked = $(this).index();
 
-            $('.change-img div').eq(indexClicked).fadeIn(time, function () {
-                $(this).addClass('visible');
-            });
-        });
+            if (indexCurrent != indexClicked) {
+
+                isItStay = false;
+                clearInterval(imgSwitchId);
+
+
+
+                $('.img-switch span.active-img-switch').removeClass('active-img-switch');
+                $(this).addClass('active-img-switch');
+
+                $('.change-img div.visible').fadeOut(time, function () {
+                    $(this).removeClass('visible');
+
+                    $('.change-img div').eq(indexClicked).fadeIn(time, function () {
+                        $(this).addClass('visible');
+
+                        isItStay = true;
+                        setTimeout( imgSwitchId = setInterval(imgSwitch, 5000) ,5000);
+                    });
+                });
+            }
+
+        }
     });
 
 
@@ -123,7 +141,8 @@ $(document).ready(function () {
 
     }
 
-    setInterval(imgSwitch, 5000);
+    var imgSwitchId = setInterval(imgSwitch, 5000);
+
 
     /*--- menu ---*/
 
@@ -238,22 +257,22 @@ $(document).ready(function () {
     });
 
 
-   /*--- change banner img ---*/
+    /*--- change banner img ---*/
 
-   /* $(window).resize(function(){
+    /* $(window).resize(function(){
 
-        $('.change-img img').each(function () {
-            var currentImg = $('.change-img img').attr('src');
-            var cutSrc = currentImg.split('.png');
-            var newImg = cutSrc[0] + ('-small.png');
-            if ($(window).width() <= '995'){
-                $(this).attr({'src':newImg});
-            }
-            else {
-                $(this).attr({'src':currentImg});
-            }
-        });
+     $('.change-img img').each(function () {
+     var currentImg = $('.change-img img').attr('src');
+     var cutSrc = currentImg.split('.png');
+     var newImg = cutSrc[0] + ('-small.png');
+     if ($(window).width() <= '995'){
+     $(this).attr({'src':newImg});
+     }
+     else {
+     $(this).attr({'src':currentImg});
+     }
+     });
 
-    });*/
+     });*/
 
 });

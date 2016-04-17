@@ -949,7 +949,7 @@ span.active-img-switch {
     width: 18.4%;
 }
 
-.instagram-photo img{
+.instagram-photo img {
     width: 100%;
     vertical-align: bottom;
 }
@@ -988,25 +988,9 @@ span.active-img-switch {
 .instagram-photo:last-child {
     margin-right: 0px;
 }
-/*
-.instagram-01 {
-    background: url("../images/instagram-01.png") no-repeat;
-}*/
 
-/*.instagram-02 {
-    background: url("../images/instagram-02.png") no-repeat;
-}*/
-
-.instagram-03 {
-    background: url("../images/instagram-03.png") no-repeat;
-}
-
-.instagram-04 {
-    background: url("../images/instagram-04.png") no-repeat;
-}
-
-.instagram-05 {
-    background: url("../images/instagram-05.png") no-repeat;
+.instagram-gallery-small {
+    display: none;
 }
 
 #content h4.use {
@@ -1054,12 +1038,16 @@ span.active-img-switch {
     opacity: 1;
 }
 
+.who-use-small {
+    display: none;
+}
+
 .subscribe {
     margin-top: 75px;
 }
 
 .subscribe p {
-    width: 209px;
+    width: 16.99%;
     height: 52px;
     background: #000000;
     text-align: center;
@@ -1071,7 +1059,7 @@ span.active-img-switch {
     line-height: 52px;
     display: inline-block;
     letter-spacing: 0.2em;
-    margin-right: 25px;
+    margin-right: 2.083%;
 }
 
 .subscribe p::after {
@@ -1086,7 +1074,7 @@ span.active-img-switch {
 }
 
 .subscribe input[type=text] {
-    width: 380px;
+    width: 30.5%;
     height: 52px;
     box-sizing: border-box;
     border: 2px solid #D3D3D3;
@@ -1096,12 +1084,12 @@ span.active-img-switch {
     outline: none;
     text-align: center;
     padding: 0 15px;
-    margin-right: 4px;
+    margin-right: 0.325%;
     letter-spacing: 0.2em;
 }
 
 .subscribe input[type=submit] {
-    width: 216px;
+    width: 17.56%;
     height: 51px;
     box-sizing: border-box;
     border: none;
@@ -1137,13 +1125,13 @@ span.active-img-switch {
 }
 
 .footer-menu {
-    width: 46%;
+    width: 85%;
     float: left;
 }
 
 .footer-menu li {
     float: left;
-    margin-right: 35px;
+    margin-right: 3.34%;
 }
 
 .footer-menu li:first-child {
@@ -1174,11 +1162,15 @@ span.active-img-switch {
     color: #ffffff;
     font-size: 1.8em;
     margin-left: 8px;
-    line-height: 41px;
+    line-height: 36px;
 }
 
 .footer-soc-networks a:hover {
     color: #cbcbcb;
+}
+
+.footer-logo {
+    display: none;
 }
 
 /*------------------------------------------------- media query -------------------------------------------------*/
@@ -1191,17 +1183,18 @@ span.active-img-switch {
         padding: 0px;
     }
 
-    .all-categories {
+    .all-categories, .instagram-gallery, .who-use, .subscribe {
         padding: 0 15px;
     }
 
-    .instagram-gallery {
-        padding: 0 15px;
+    .footer-wrap {
+        padding: 0 17px;
     }
 
-    .who-use {
-        padding: 0 15px;
+    .product-carousel .ca-container {
+        max-width: 1000px;
     }
+
 }
 
 /*------------------------------------------------- width < 1100px -------------------------------------------------*/
@@ -1231,6 +1224,10 @@ span.active-img-switch {
         font-size: 1.2em;
         width: 38px;
         height: 34px;
+    }
+
+    .product-carousel .ca-container {
+        max-width: 800px;
     }
 
 }
@@ -1277,6 +1274,10 @@ span.active-img-switch {
         width: 20%;
     }
 
+    .product-carousel .ca-container {
+        max-width: 800px;
+    }
+
 }
 
 /*------------------------------------------------- width < 900px -------------------------------------------------*/
@@ -1288,6 +1289,37 @@ span.active-img-switch {
 
     .hidden-basket {
         width: 150%;
+    }
+
+    .subscribe p {
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        height: 31px;
+        line-height: 31px;
+    }
+
+    .subscribe input[type=submit] {
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        height: 31px;
+        box-shadow: 0 1px 0px 1px rgba(20, 21, 24, 0.75);
+    }
+
+    .subscribe input[type=text] {
+        font-size: 1.07em;
+        letter-spacing: 0.075em;
+        height: 31px;
+    }
+
+    .subscribe p::after {
+        background-size: contain;
+        width: 10px;
+        height: 31px;
+        right: -10px;
+    }
+
+    .product-carousel .ca-container {
+        max-width: 600px;
     }
 
 }
@@ -1345,6 +1377,167 @@ span.active-img-switch {
     .category a {
         font-size: 1.42em;
     }
+
+    .subscribe p {
+        width: 290px;
+        height: 41px;
+        font-size: 1.35em;
+        line-height: 41px;
+        letter-spacing: 0.075em;
+        display: block;
+        margin: 0 auto 3px;
+    }
+
+    .subscribe p:after {
+        display: none;
+    }
+
+    .subscribe input[type=text] {
+        font-size: 1.28em;
+        letter-spacing: 0.075em;
+        width: 290px;
+        height: 41px;
+        display: block;
+        margin: 0 auto 3px;
+    }
+
+    .subscribe input[type=submit] {
+        width: 290px;
+        height: 41px;
+        font-size: 1.35em;
+        line-height: 41px;
+        letter-spacing: 0.075em;
+        display: block;
+        margin: 0 auto 3px;
+        box-shadow: 0 3px 0px 1px rgba(20, 21, 24, 0.75);
+        color: #ffffff;
+    }
+
+    .footer-soc-networks a {
+        font-size: 1.3em;
+        margin-left: 5px;
+    }
+
+    .footer-menu a {
+        font-size: 1em;
+    }
+
+    #content h4 {
+        margin-top: 27px;
+    }
+
+    .content-separator {
+        margin: 35px auto 0;
+    }
+
+    #content h4.instagram {
+        margin-top: 20px;
+    }
+
+    #content h4.use {
+        margin-top: 34px;
+    }
+
+    .subscribe {
+        margin-top: 45px;
+    }
+
+    #footer {
+        margin-top: 45px;
+    }
+
+    .product-carousel .ca-container {
+        max-width: 400px;
+    }
+
+    .instagram-gallery {
+        display: none;
+    }
+
+    .instagram-gallery-small {
+        display: block;
+        margin-top: 25px;
+    }
+
+    .instagram-gallery-small .ca-container {
+        max-width: 600px;
+        height: 180px;
+    }
+
+    .instagram-gallery-small .instagram-photo {
+        width: 100%;
+    }
+
+    .instagram-gallery-small .ca-container img {
+        width: 180px;
+    }
+
+    .instagram-gallery-small .ca-nav span {
+        top: 59%;
+    }
+
+    .who-use {
+        display: none;
+    }
+
+    .who-use-small {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .who-use-small img {
+        width: 170px;
+    }
+
+    .who-use-small .ca-item {
+        width: 200px;
+    }
+
+    .who-use-small .ca-container {
+        max-width: 600px;
+        height: 170px;
+    }
+
+    .who-use-small .ca-nav span {
+        top: 58%;
+        left: -14px;
+    }
+
+    .who-use-small .ca-nav span.ca-nav-next {
+        right: -14px;
+    }
+}
+
+/*------------------------------------------------- width < 650px -------------------------------------------------*/
+
+@media all and (max-width: 650px) {
+
+    .instagram-gallery-small .ca-container {
+        max-width: 400px;
+    }
+
+    .who-use-small .ca-container {
+        max-width: 400px;
+    }
+
+}
+
+/*------------------------------------------------- width < 600px -------------------------------------------------*/
+
+@media all and (max-width: 600px) {
+
+    .footer-menu li {
+        margin-right: 2%;
+    }
+
+    .footer-wrap {
+        padding: 0 5px;
+    }
+
+    .logo-wrap {
+        margin: 10.6% auto 0;
+    }
+
 }
 
 /*------------------------------------------------- width < 550px -------------------------------------------------*/
@@ -1365,6 +1558,31 @@ span.active-img-switch {
 
     .hidden-basket {
         width: 666%;
+    }
+
+    .footer-logo {
+        display: block;
+    }
+
+    #footer {
+        height: 50px;
+        background: #F1F1F1;
+        margin-top: 30px;
+    }
+
+    .footer-menu, .footer-soc-networks {
+        display: none;
+    }
+
+    .footer-logo a {
+        display: block;
+        margin: 14px auto;
+        width: 79px;
+    }
+
+    .category {
+        width: 100%;
+        margin: 0 auto 10px;
     }
 
 }
@@ -1417,6 +1635,34 @@ span.active-img-switch {
         margin-left: 5px;
     }
 
+    .product-carousel .ca-container {
+        max-width: 200px;
+    }
+
 }
+
+/*------------------------------------------------- width < 450px -------------------------------------------------*/
+
+@media all and (max-width: 450px) {
+
+    .instagram-gallery-small .ca-container {
+        max-width: 200px;
+    }
+
+    .who-use-small .ca-container {
+        max-width: 200px;
+    }
+
+}
+
+/*------------------------------------------------- width < 400px -------------------------------------------------*/
+
+@media all and (max-width: 400px) {
+    .logo-wrap {
+        margin: 7.6% auto 0;
+    }
+
+}
+
 
 

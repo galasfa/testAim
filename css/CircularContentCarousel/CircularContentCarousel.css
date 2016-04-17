@@ -23,7 +23,7 @@
 .ca-nav span {
     width: 12px;
     height: 19px;
-    background: transparent url(../../images/CircularContentCarousel/carousel-arrow-left.png) no-repeat top left;
+    background: url(../../images/CircularContentCarousel/carousel-arrow-left.png) no-repeat top left;
     position: absolute;
     top: 51%;
     margin-top: -24px;
